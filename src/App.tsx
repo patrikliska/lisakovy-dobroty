@@ -1,26 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@mui/material';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { DebtList, NavBar } from './widgets';
 
-export default App;
+export const App = () => (
+  <>
+    <NavBar />
+    <Box sx={{ p: 2, minHeight: '100%', minWidth: '100vw', display: 'flex' }}>
+      <DebtList />
+    </Box>
+  </>
+);
